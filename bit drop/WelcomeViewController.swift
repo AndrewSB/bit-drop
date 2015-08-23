@@ -24,7 +24,9 @@ class WelcomeViewController: UIViewController {
         
         animator = UIDynamicAnimator(referenceView: self.view)
         gravity = UIGravityBehavior(items: [coinImageView])
-        animator.addBehavior(gravity)
+        delay(0.0000001) {
+            self.animator.addBehavior(self.gravity)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {

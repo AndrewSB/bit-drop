@@ -18,6 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slot" translatesAutoresizingMaskIntoConstraints="NO" id="77d-6E-GgF">
+                                <rect key="frame" x="220" y="505" width="160" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="77d-6E-GgF" secondAttribute="height" multiplier="557:100" id="24C-Dj-F9e"/>
+                                    <constraint firstAttribute="width" constant="160" id="Yhz-px-OHS"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="jXD-E9-aad">
                                 <rect key="frame" x="249" y="47" width="102" height="102"/>
                                 <constraints>
@@ -25,11 +32,14 @@
                                     <constraint firstAttribute="width" secondItem="jXD-E9-aad" secondAttribute="height" multiplier="1:1" id="jKC-L0-QIG"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slot" translatesAutoresizingMaskIntoConstraints="NO" id="77d-6E-GgF">
-                                <rect key="frame" x="220" y="505" width="160" height="29"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0B-9U-7Hf">
+                                <rect key="frame" x="0.0" y="534" width="600" height="66"/>
+                                <color key="backgroundColor" red="0.21769329905509949" green="0.60984611511230469" blue="0.82702958583831787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slot-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="jev-r8-rao">
+                                <rect key="frame" x="219" y="523" width="159" height="11"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="77d-6E-GgF" secondAttribute="height" multiplier="557:100" id="24C-Dj-F9e"/>
-                                    <constraint firstAttribute="width" constant="160" id="Yhz-px-OHS"/>
+                                    <constraint firstAttribute="height" constant="11" id="ncP-mH-gNA"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -38,7 +48,14 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="77d-6E-GgF" secondAttribute="bottom" constant="66" id="9Af-IE-pGB"/>
                             <constraint firstItem="jXD-E9-aad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JYw-ZM-KHT"/>
                             <constraint firstItem="jXD-E9-aad" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="KV3-dN-eX4"/>
+                            <constraint firstItem="y0B-9U-7Hf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MXK-GH-Hsh"/>
+                            <constraint firstItem="jev-r8-rao" firstAttribute="bottom" secondItem="77d-6E-GgF" secondAttribute="bottom" id="NEd-PI-dyF"/>
                             <constraint firstItem="77d-6E-GgF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qj1-wf-AQK"/>
+                            <constraint firstItem="jev-r8-rao" firstAttribute="leading" secondItem="77d-6E-GgF" secondAttribute="leading" constant="-1" id="bMN-Sh-qm8"/>
+                            <constraint firstItem="y0B-9U-7Hf" firstAttribute="top" secondItem="77d-6E-GgF" secondAttribute="bottom" id="f0z-dZ-Bi1"/>
+                            <constraint firstItem="jev-r8-rao" firstAttribute="trailing" secondItem="77d-6E-GgF" secondAttribute="trailing" constant="-2" id="fJJ-yv-rZp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y0B-9U-7Hf" secondAttribute="bottom" id="fvf-t2-Pnr"/>
+                            <constraint firstAttribute="trailing" secondItem="y0B-9U-7Hf" secondAttribute="trailing" id="kfR-rr-ELb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -54,5 +71,6 @@
     <resources>
         <image name="bitcoin" width="67" height="67"/>
         <image name="slot" width="95" height="17"/>
+        <image name="slot-bottom" width="94" height="6"/>
     </resources>
 </document>
