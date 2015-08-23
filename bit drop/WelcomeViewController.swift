@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import QuartzCore
 
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var coinImageView: UIImageView!
     @IBOutlet weak var slotImageView: UIImageView!
     
+    var animator: UIDynamicAnimator!
+    var gravity: UIGravityBehavior!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+//        coinImageView.frame..center = CGPoint(x: view.center.x, y: coinImageView.center.y)
+        
+        animator = UIDynamicAnimator(referenceView: self.view)
+        gravity = UIGravityBehavior(items: [coinImageView])
+        animator.addBehavior(gravity)
     }
     
     override func viewDidAppear(animated: Bool) {
-        <#code#>
+        super.viewDidAppear(animated)
+        
+        
     }
     
 
