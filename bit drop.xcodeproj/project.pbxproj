@@ -14,6 +14,8 @@
 		46D5AE591B89641E00F3EC41 /* bit_dropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5AE581B89641E00F3EC41 /* bit_dropUITests.swift */; };
 		46D5AE651B8966FA00F3EC41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5AE641B8966FA00F3EC41 /* WelcomeViewController.swift */; };
 		46D5AE671B89721300F3EC41 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5AE661B89721300F3EC41 /* Delay.swift */; };
+		46D5AE691B89798C00F3EC41 /* SpinningImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D5AE681B89798C00F3EC41 /* SpinningImageView.swift */; };
+		46D5AE6B1B897DFC00F3EC41 /* 8-BIT WONDER.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 46D5AE6A1B897DFA00F3EC41 /* 8-BIT WONDER.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		46D5AE5A1B89641E00F3EC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46D5AE641B8966FA00F3EC41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		46D5AE661B89721300F3EC41 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		46D5AE681B89798C00F3EC41 /* SpinningImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinningImageView.swift; sourceTree = "<group>"; };
+		46D5AE6A1B897DFA00F3EC41 /* 8-BIT WONDER.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-BIT WONDER.TTF"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			children = (
 				46D5AE431B89641E00F3EC41 /* AppDelegate.swift */,
 				46D5AE641B8966FA00F3EC41 /* WelcomeViewController.swift */,
+				46D5AE681B89798C00F3EC41 /* SpinningImageView.swift */,
 				46D5AE471B89641E00F3EC41 /* Main.storyboard */,
 				46D5AE631B89646800F3EC41 /* Supporting Files */,
 			);
@@ -99,6 +104,7 @@
 		46D5AE631B89646800F3EC41 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46D5AE6A1B897DFA00F3EC41 /* 8-BIT WONDER.TTF */,
 				46D5AE4A1B89641E00F3EC41 /* Assets.xcassets */,
 				46D5AE4C1B89641E00F3EC41 /* LaunchScreen.storyboard */,
 				46D5AE4F1B89641E00F3EC41 /* Info.plist */,
@@ -190,6 +196,7 @@
 				46D5AE4E1B89641E00F3EC41 /* LaunchScreen.storyboard in Resources */,
 				46D5AE4B1B89641E00F3EC41 /* Assets.xcassets in Resources */,
 				46D5AE491B89641E00F3EC41 /* Main.storyboard in Resources */,
+				46D5AE6B1B897DFC00F3EC41 /* 8-BIT WONDER.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +216,7 @@
 			files = (
 				46D5AE671B89721300F3EC41 /* Delay.swift in Sources */,
 				46D5AE441B89641E00F3EC41 /* AppDelegate.swift in Sources */,
+				46D5AE691B89798C00F3EC41 /* SpinningImageView.swift in Sources */,
 				46D5AE651B8966FA00F3EC41 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,11 +11,13 @@ import QuartzCore
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var coinImageView: UIImageView!
+    @IBOutlet weak var coinImageView: SpinningImageView!
     @IBOutlet weak var slotImageView: UIImageView!
+    @IBOutlet weak var boundaryView: UIView!
     
     var animator: UIDynamicAnimator!
     var gravity: UIGravityBehavior!
+    var collision: UICollisionBehavior!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +26,14 @@ class WelcomeViewController: UIViewController {
         
         animator = UIDynamicAnimator(referenceView: self.view)
         gravity = UIGravityBehavior(items: [coinImageView])
-        delay(0.0000001) {
+        collision = UICollisionBehavior(items: [coinImageView, boundaryView])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        collision.collisionDelegate = self
+        
+        delay(0.0000000001) {
             self.animator.addBehavior(self.gravity)
+            self.animator.addBehavior(self.collision)
         }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
     }
     
 
@@ -46,4 +47,21 @@ class WelcomeViewController: UIViewController {
     }
     */
 
+}
+
+extension WelcomeViewController: UICollisionBehaviorDelegate {
+    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
+        self.collision.removeItem(boundaryView)
+        self.collision.removeItem(coinImageView)
+        
+        delay(1) {
+            delay(0.001) {
+                delay(0.0001) {
+                    delay(0.01) {
+                        
+                    }
+                }
+            }
+        }
+    }
 }
