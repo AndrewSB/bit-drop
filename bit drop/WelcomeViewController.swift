@@ -14,6 +14,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var coinImageView: SpinningImageView!
     @IBOutlet weak var slotImageView: UIImageView!
     @IBOutlet weak var boundaryView: UIView!
+    @IBOutlet weak var heroLabel: UILabel!
     
     var animator: UIDynamicAnimator!
     var gravity: UIGravityBehavior!
@@ -23,6 +24,8 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
 //        coinImageView.frame..center = CGPoint(x: view.center.x, y: coinImageView.center.y)
+        
+        self.heroLabel.font = UIFont(name: "8BIT WONDER Nominal", size: 32)!
         
         animator = UIDynamicAnimator(referenceView: self.view)
         gravity = UIGravityBehavior(items: [coinImageView])
@@ -55,10 +58,16 @@ extension WelcomeViewController: UICollisionBehaviorDelegate {
         self.collision.removeItem(coinImageView)
         
         delay(1) {
+            self.heroLabel.hidden = false
             delay(0.001) {
+                self.heroLabel.hidden = true
                 delay(0.0001) {
+                    self.heroLabel.hidden = false
                     delay(0.01) {
-                        
+                        self.heroLabel.hidden = true
+                        delay(0.00001) {
+                            self.heroLabel.hidden = false
+                        }
                     }
                 }
             }
